@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-kmhf_3grb2ldm(bsx_&=l!dl-#%p$=u)*&m4dvk0d^!19(m%1z
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['osa.pythonanywhere.com']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -48,9 +48,9 @@ REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
         'rest_framework_simplejwt.authentication.JWTAuthentication',
     ),
-    'DEFAULT_PERMISSION_CLASSES': (
-        'rest_framework.permissions.IsAuthenticated',
-    ),
+   # 'DEFAULT_PERMISSION_CLASSES': (
+     #   'rest_framework.permissions.IsAuthenticated',
+   # ),
 }
 
 
@@ -88,13 +88,22 @@ WSGI_APPLICATION = 'ecommerce.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
+#DATABASES = {
+ #   'default': {
+  #      'ENGINE': 'django.db.backends.sqlite3',
+   #     'NAME': BASE_DIR / 'db.sqlite3',
+    #}
+#}
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',  # 
+        'NAME': 'becapstone',           #
+        'USER': 'root',                
+        'PASSWORD': '0924475152@os',          
+        'HOST': 'localhost',                    
+        'PORT': '3306',                         
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
