@@ -2,7 +2,7 @@
 
 ## Overview
 
-BE-Capstone-Project is a Django-based web application designed to [briefly describe the purpose of your project, e.g., "provide a platform for users to register and manage their profiles"]. This project utilizes modern web technologies and best practices to ensure a robust and scalable application.
+BE-Capstone-Project is a Django-based web application . This project utilizes modern web technologies and best practices to ensure a robust and scalable application.
 
 ## Features
 
